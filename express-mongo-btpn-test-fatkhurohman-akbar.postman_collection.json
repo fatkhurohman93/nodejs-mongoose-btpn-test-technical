@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "f673809f-150f-4a86-a0f1-5da50a62fec9",
+		"name": "express-mongo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Chocolatos\",\r\n    \"price\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/items",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"akbar\",\r\n    \"email\": \"akbar@akbarpathur.com\",\r\n    \"password\": \"1122334455\",\r\n    \"accountNumber\": \"987654321\",\r\n    \"identityNumber\": \"654321bca\",\r\n    \"role\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/users",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"admin\",\r\n    \"password\": \"1122334455\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/auth/signin",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll_item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/items?name=",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"items"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/users?name=",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": ""
+						},
+						{
+							"key": "webtoken",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGQ5OGZmYjc1NGI3NGEyNGQ2MWRjMCIsImVtYWlsIjoibWZhdGtodXJvaG1hbjkzQGdtYWlsLmNvbSIsImlhdCI6MTYyODI4MjEyMCwiZXhwIjoxNjI4MzY4NTIwfQ.fklHIvMMfDrLbw2e2Wn-9PMWDaxmNjY_VnAdZXkx3JM",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findOne_item",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/items/610d906ce4172f4ca0f8d727",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"items",
+						"610d906ce4172f4ca0f8d727"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/users/610d99a141d3bd3fe8157bf3",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"610d99a141d3bd3fe8157bf3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByAccountNumber_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/users/accountnumber/123456789",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"accountnumber",
+						"123456789"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByIdentityNumber_user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/users/identitynumber/abc123456",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"identitynumber",
+						"abc123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aqua\",\r\n    \"price\": 3000,\r\n    \"imageurl\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/items/610d906ce4172f4ca0f8d727",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"items",
+						"610d906ce4172f4ca0f8d727"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_item",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/items/610d8ff97db4122f8cf14924",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"items",
+						"610d8ff97db4122f8cf14924"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_user",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "webtoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMGUxZGJkNTAwMzM2MmU1MDlmOTRkYiIsImVtYWlsIjoiYWRtaW5AYWtiYXJwYXRodXIuY29tIiwiaWF0IjoxNjI4MzE1NDA5LCJleHAiOjE2Mjg0MDE4MDl9.WwYkSxKMN3eoyWNz7zgWwvHWadWBJCepwVNRRuupiYo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://btpn-test.akbarpathur.com/api/users/610d99a141d3bd3fe8157bf3",
+					"protocol": "https",
+					"host": [
+						"btpn-test",
+						"akbarpathur",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"610d99a141d3bd3fe8157bf3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
